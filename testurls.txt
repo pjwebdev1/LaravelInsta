@@ -10,3 +10,5 @@ http://127.0.0.1:8000/testscript/1
 
 query parameters 
 http://127.0.0.1:8000/testscript?someparam=Peter%20Peter%20Pumpkin%20Eater
+
+

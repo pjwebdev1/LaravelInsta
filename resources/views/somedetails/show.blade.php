@@ -4,7 +4,8 @@
 
 <div class="container">
 Hello World
-<p>{{ $someid }}</p>
+<p>{{ $testdata }}</p>
+<p>{{ $testdata->model }}</p>
 </div>
 
 

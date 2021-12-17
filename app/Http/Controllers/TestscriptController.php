@@ -9,6 +9,8 @@ class TestscriptController extends Controller
 {
 	public function index()
 	{
+
+		//test data
 		$stuff = [
 			'type' => 'car', 'make' => 'Acura', 'model' => 'Integra', 'price' => 5000
 		];
@@ -18,9 +20,6 @@ class TestscriptController extends Controller
 			['name' => 'Canadian', 'topping' => 'bacon', 'crust' => 'thick', 'listnumber' => 2],
 			['name' => 'Meat Lovers', 'topping' => 'pepperoni', 'crust' => 'thick', 'listnumber' => 3]
 		];
-
-
-
 
 		//accessing the model to retrieve data from database
 		
@@ -33,16 +32,18 @@ class TestscriptController extends Controller
 
 		$testscripts = Testscript::latest()->get();  //same as above but now retrieves the data based of the order they were entered into the database. created_at was a column that i did not enter, it was there already.
 
-
-
-
-	
-
-		return view('testscript', $stuff, ['pizzas' => $pizzas, 'testscripts' => $testscripts, 'someparam' => request('someparam')]); // added 'testscripts' => $testscripts so that it would add the object @testscripts to the view.
+		return view('testscript.index', $stuff, ['pizzas' => $pizzas, 'testscripts' => $testscripts, 'someparam' => request('someparam')]); // added 'testscripts' => $testscripts so that it would add the object @testscripts to the view.
 	}
 
 	public function show($someid)
 	{
-		return view('somedetails', ['someid' => $someid]);
+		$testdata = Testscript::FindOrFail($someid);	
+		return view('somedetails.show', ['testdata' => $testdata]);
 	}
+
+	public function create() 
+	{
+		return view('testscript.create');
+	}
+
 }

@@ -1,0 +1,8 @@
+naming conventions:
+https://xqsit.github.io/laravel-coding-guidelines/docs/naming-conventions/
+
+Request							Route								Controller and action 					View
+
+Get 								/pizzas							PizzaController@index						index
+Get 								/pizzas/{id}				PizzaController@show						show
+Get 								/pizzas/create			PizzaController@create					create
