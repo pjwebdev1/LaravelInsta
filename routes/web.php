@@ -28,6 +28,8 @@ Route::get('/testscript/create', [App\Http\Controllers\TestscriptController::cla
 Route::get('/testscript/{someid}', [App\Http\Controllers\TestscriptController::class, 'show']);
 
 
+Route::post('/testscript', [App\Http\Controllers\TestscriptController::class, 'store']);
+
 
 Auth::routes();
 

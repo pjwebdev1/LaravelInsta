@@ -46,4 +46,13 @@ class TestscriptController extends Controller
 		return view('testscript.create');
 	}
 
+	public function store()
+	{
+		error_log(request('makeofcar'));
+		error_log(request('modelofcar'));
+		error_log(request('yearofcar'));
+
+		return redirect('/testscript/create');
+	}
+
 }

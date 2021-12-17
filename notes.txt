@@ -6,3 +6,4 @@ Request							Route								Controller and action 					View
 Get 								/pizzas							PizzaController@index						index
 Get 								/pizzas/{id}				PizzaController@show						show
 Get 								/pizzas/create			PizzaController@create					create
+Post								/pizzas							PizzaController@store						-------
