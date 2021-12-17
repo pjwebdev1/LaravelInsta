@@ -52,12 +52,38 @@ echo($myname);
 <!--  query parameters 
 put this into the address bar
 http://127.0.0.1:8000/testscript?someparam=Peter%20Peter%20Pumpkin%20Eater
--->
+--> 
 
-<p>{{ $someparam }}</p>
+
+<!-- PHP blade comments -->
+{{-- comment here --}}
+
+
+
+
+<!-- Using a model to retrieve data from the database. The controller stores the data in an object and passes it to the view. The value of the data is displayed below. -->
+@foreach($testscripts as $testscript)
+
+<p>{{ $testscript->make }} {{ $testscript->model }}  = ${{ $testscript->price }}</p>
+
+@endforeach
+
 
 <!-- route parameters -->
 
+
+
+
+
+<!-- retrieving data through the model and displaying it in the view -->
+
+
+
+
+
+
 </div>
+
+
 
 @endsection
