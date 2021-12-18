@@ -25,7 +25,7 @@ Route::get('/', function () {
 Route::get('/testscript', [App\Http\Controllers\TestscriptController::class, 'index']);
 // added this route to use for a page with a forum. This must be above the below route because the app will think 'create' is {someid}
 Route::get('/testscript/create', [App\Http\Controllers\TestscriptController::class, 'create']);
-Route::get('/testscript/{someid}', [App\Http\Controllers\TestscriptController::class, 'show']);
+Route::get('/somedetails/{someid}', [App\Http\Controllers\TestscriptController::class, 'show']);
 
 
 Route::post('/testscript', [App\Http\Controllers\TestscriptController::class, 'store']);

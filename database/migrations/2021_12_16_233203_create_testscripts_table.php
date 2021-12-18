@@ -18,6 +18,7 @@ class CreateTestscriptsTable extends Migration
 						$table->string('make');
 						$table->string('model');
 						$table->integer('price'); 
+						$table->json('details');
             $table->timestamps();
         });
     }

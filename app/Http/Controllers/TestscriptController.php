@@ -51,13 +51,15 @@ class TestscriptController extends Controller
 		// logs to the terminal
 		// error_log(request('makeofcar'));
 		// error_log(request('modelofcar'));
-		// error_log(request('yearofcar'));
+		// error_log(request('price ofcar'));
+		// return request('details');
 
 //store into database
 		$testscript = new Testscript();
-		$testscript->make= request('makeofcar');
-		$testscript->model= request('modelofcar');
-		$testscript->price= request('priceofcar');
+		$testscript->make = request('makeofcar');
+		$testscript->model = request('modelofcar');
+		$testscript->price = request('priceofcar');
+		$testscript->details = request('details');
 		$testscript->save();
 
 //after 
