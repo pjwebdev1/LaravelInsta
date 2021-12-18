@@ -1,0 +1,13 @@
+
+.class1{
+	color: blue;
+}
+.class2 {
+	color:blueviolet
+}
+
+.class1 {
+  .class2 {
+		color: green;
+  }
+}

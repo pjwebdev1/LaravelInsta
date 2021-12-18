@@ -5,7 +5,7 @@
 <div class="container">
 
 <!-- using blade to pass in values to the view -->
-
+<div class="h3">using blade to pass in values to the view</div>
 <p>{{ $type }} - {{ $make }}</p>
 @if ($price > 5000)
 <p>This car is expensive!</p>
@@ -19,7 +19,7 @@
 @endunless
 
 <!-- php directive - regular php without using blade -->
-
+<div class="h3">php directive - regular php without using blade</div>
 @php
 $myname = 'Peter';
 echo($myname);
@@ -27,13 +27,13 @@ echo($myname);
 
 
 <!-- using loops -->
-
+<div class="h3">using loops</div>
 @for($i = 0; $i < 5; $i++) <p>i is equal to {{ $i }}</p>
 @endfor
 
 <!-- passing through an array  -->
 
-
+<div class="h3">passing through an array</div>
 @foreach($pizzas as $pizza)
 <p>{{ $loop->index}} - {{ $pizza['name'] }}
 @if($loop->first)
@@ -46,6 +46,7 @@ echo($myname);
 @endforeach
 
 <!-- images  -->
+<div class="h3">images</div>
 <p><img src="img/weed.png" class="w-25" alt="Weed image"></p>
 
 
@@ -62,6 +63,7 @@ http://127.0.0.1:8000/testscript?someparam=Peter%20Peter%20Pumpkin%20Eater
 
 
 <!-- Using a model to retrieve data from the database. The controller stores the data in an object and passes it to the view. The value of the data is displayed below. -->
+<div class="h3">Using a model to retrieve data from the database</div>
 @foreach($testscripts as $testscript)
 
 <p>{{ $testscript->make }} {{ $testscript->model }}  = ${{ $testscript->price }}</p>
@@ -69,15 +71,17 @@ http://127.0.0.1:8000/testscript?someparam=Peter%20Peter%20Pumpkin%20Eater
 @endforeach
 
 
-<!-- route parameters -->
-
-
-
-
-
-<!-- retrieving data through the model and displaying it in the view -->
-
-
+<!-- scss -->
+<div class="h3">scss</div>
+<div class="class1">
+	Class1
+<div class="class2">
+	Class1 Class2
+</div>
+</div>
+<div class="class2">
+	Class2
+</div>
 
 
 
