@@ -21,18 +21,17 @@
     <div id="modelofcarEntry" class="form-text">Please enter the model of your car.</div>
   </div>
   <div class="mb-3">
-    <label for="yearofcar" class="form-label">Year</label>
-    <input type="number" class="form-control" id="yearofcar" name="yearofcar" aria-describedby="year of car" min="1955" max="2022">
-    <div id="yearofcarEntry" class="form-text">Please enter the model year of your car.</div>
+    <label for="priceofcar" class="form-label">Year</label>
+    <input type="number" class="form-control" id="priceofcar" name="priceofcar" aria-describedby="year of car">
+    <div id="priceofcarEntry" class="form-text">Please enter the model year of your car.</div>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
 
 
-
+<div class="h1 text-success p-5">{{ session('msg') }}</div>
 </div>
-
 
 
 @endsection

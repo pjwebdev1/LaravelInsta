@@ -48,11 +48,20 @@ class TestscriptController extends Controller
 
 	public function store()
 	{
-		error_log(request('makeofcar'));
-		error_log(request('modelofcar'));
-		error_log(request('yearofcar'));
+		// logs to the terminal
+		// error_log(request('makeofcar'));
+		// error_log(request('modelofcar'));
+		// error_log(request('yearofcar'));
 
-		return redirect('/testscript/create');
+//store into database
+		$testscript = new Testscript();
+		$testscript->make= request('makeofcar');
+		$testscript->model= request('modelofcar');
+		$testscript->price= request('priceofcar');
+		$testscript->save();
+
+//after 
+		return redirect('/testscript/create')->with('msg', 'Success! Thank you for your submission.');
 	}
 
 }
