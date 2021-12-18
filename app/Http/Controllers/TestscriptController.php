@@ -66,4 +66,12 @@ class TestscriptController extends Controller
 		return redirect('/testscript/create')->with('msg', 'Success! Thank you for your submission.');
 	}
 
+	public function destroy($someid) 
+	{
+		$testdata = Testscript::FindOrFail($someid);	
+		$testdata -> delete();
+		return redirect('/testscript/create')->with('msg', 'Success! Thank you for your deletion.');
+	}
+
 }
+
