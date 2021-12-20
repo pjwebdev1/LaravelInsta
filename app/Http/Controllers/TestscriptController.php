@@ -7,6 +7,13 @@ use App\Models\Testscript; //added this so that i can use the model inside this 
 
 class TestscriptController extends Controller
 {
+
+	//requires that user to be logged in to view all pages below
+	// public function __construct()
+	// {
+	// 	$this->middleware('auth');
+	// }
+
 	public function index()
 	{
 
