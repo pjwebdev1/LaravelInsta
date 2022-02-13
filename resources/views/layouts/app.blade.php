@@ -26,7 +26,7 @@
 	<div id="app">
 		<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
 			<div class="container">
-				<a class="navbar-brand d-flex align-items-center justify-content-center" href="{{ url('/') }}">
+				<a class="navbar-brand d-flex align-items-center justify-content-center" href="{{ url('/home') }}">
 					<!-- {{ config('app.name', 'Laravel') }} -->
 					<img src="/svg/petestagramLogo.svg" style="height: 20px; border-right: 1px solid #333;" class="pe-3">
 					<div class="ps-3">PeteStagram</div>

@@ -26,8 +26,16 @@
 				<div class="card-header">{{ __('Sites') }}</div>
 
 				<div class="card-body">
-				<p><a href="{{ route('testscript.index') }}">Test Script</a></p>
-				<p><a href="{{ route('somedetails.show', '1') }}">Some Details ID 1</a></p>
+				<p><a href="{{ route('welcome') }}">Welcome</a></p>
+				<p><a href="{{ route('home.index') }}">Home</a></p>
+				<p><a href="{{ route('profile.index', '1') }}">Profile page with ID 1</a></p>
+				<p><a href="{{ route('profile.index', '2') }}">Profile page with ID 2</a></p>
+				<p><a href="{{ route('p.create') }}">Create Post</a></p>
+				<p><a href="{{ route('testscript.index') }}">Testscript index page</a></p>
+				<p><a href="{{ route('testscript.create') }}">Testscript create page</a></p>
+				<p><a href="{{ route('somedetails.show', '1') }}">Some Details with ID 1</a></p>
+				<p><a href="{{ route('replicate.index', '2') }}">Replicate index page with ID 2</a></p>
+				<p><a href="{{ route('replicate.create') }}">Replicate create page</a></p>
 				
 				<!-- <p><a href="/profile">Profile</a></p> -->
 				</div>

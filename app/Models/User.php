@@ -17,6 +17,8 @@ class User extends Authenticatable
 	 *
 	 * @var array<int, string>
 	 */
+
+	/** */
 	protected $fillable = [
 		'name',
 		'email',
@@ -43,8 +45,16 @@ class User extends Authenticatable
 		'email_verified_at' => 'datetime',
 	];
 
-	public function profile(){
+	public function profile()
+	{
 		return $this->hasOne(Profile::class);
 	}
 
+	public function posts()
+	{
+		return $this->hasMany(Posts::class)->orderBy('created_at', 'DESC');
+	}
+
+	
+	
 }
