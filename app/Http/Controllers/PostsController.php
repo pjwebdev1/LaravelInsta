@@ -28,6 +28,9 @@ class PostsController extends Controller
 
 		$imagePath = request('image')->store('uploads', 'public');
 
+
+dd($imagePath);
+
 		$image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 800);
 		$image->save();
 
@@ -51,13 +54,9 @@ class PostsController extends Controller
 	// 	$imageUrl = $image->image;
 	// 	dd($imageUrl);
 	// }
-	public function show(\App\Models\Posts $imageId)
+	public function show(\App\Models\Posts $postId)
 	{
-
-		// dd($imageId);
-
-
-		return view('posts.show', ['imageId' => $imageId]);
+		return view('posts.show', ['postId' => $postId]);
 		// return redirect('/storage/' . $imageUrl);		
 		// return redirect('/posts/' . $imageUrl);
 	}

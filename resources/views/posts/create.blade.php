@@ -4,7 +4,7 @@
 
 <div class="container">
 	<div class="row h1 justify-content-center m-5">Add New Post</div>
-	<form action="/p" enctype="multipart/form-data" method="post">@csrf
+	<form action="/post" enctype="multipart/form-data" method="post">@csrf
 		<div class="row mb-3">
 			<label for="caption" class="col-4 col-form-label text-md-right">{{ __('Caption') }}</label>
 			<div class="col-6">
@@ -35,8 +35,6 @@
 		</div>
 	</form>
 </div>
-
-
 
 
 

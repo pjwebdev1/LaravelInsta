@@ -15,7 +15,7 @@
 				</div>
 				@auth
 				<div class="border-stop ps-3">
-					<a href="{{ route('p.create') }}" type="button" class="btn btn-success btn-sm">Post Image</a>
+					<a href="{{ route('post.create') }}" type="button" class="btn btn-success btn-sm">Post Image</a>
 				</div>
 				@endauth
 			</div>
@@ -45,7 +45,7 @@
 				</div>
 				@can('update', $user->profile)
 				<div class="border-stop ps-3">
-					<a href="{{ route('p.create') }}" type="button" class="btn btn-success btn-sm">Post Image</a>
+					<a href="{{ route('post.create') }}" type="button" class="btn btn-success btn-sm">Post Image</a>
 				</div>
 				@endcan
 			</div>
@@ -85,7 +85,7 @@
 			@foreach($user->posts as $post)
 			<div class="col">
 				<div class="p-3 border bg-light">
-					<a href="{{ route('p.show', $post->id) }}">
+					<a href="{{ route('post.show', $post->id) }}">
 						<img src="/storage/{{$post->image}}" class="w-100"></a>
 				</div>
 			</div>
@@ -93,5 +93,4 @@
 		</div>
 	</div>
 </div>
-
 @endsection
