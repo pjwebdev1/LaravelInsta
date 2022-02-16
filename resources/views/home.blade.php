@@ -30,6 +30,7 @@
 				<p><a href="{{ route('home.index') }}">Home</a></p>
 				<p><a href="{{ route('profile.index', '1') }}">Profile page with ID 1</a></p>
 				<p><a href="{{ route('profile.index', '2') }}">Profile page with ID 2</a></p>
+				<p><a href="{{ route('profile.index', '3') }}">Profile page with ID 3</a></p>
 				<p><a href="{{ route('p.create') }}">Create Post</a></p>
 				<p><a href="{{ route('testscript.index') }}">Testscript index page</a></p>
 				<p><a href="{{ route('testscript.create') }}">Testscript create page</a></p>

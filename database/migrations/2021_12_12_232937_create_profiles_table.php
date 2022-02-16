@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateProfilesTable extends Migration
 {
@@ -17,8 +18,9 @@ class CreateProfilesTable extends Migration
 					$table->id();
 					$table->unsignedBigInteger('user_id');
 					$table->string('title');
-					$table->text('description');
-					$table->string('url');
+					$table->text('description')->nullable();
+					$table->string('url')->nullable();
+					$table->string('image')->nullable();
 					$table->timestamps();
 
 					$table->index('user_id');

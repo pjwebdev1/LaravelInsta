@@ -53,7 +53,7 @@ class PostsController extends Controller
 	// }
 	public function show(\App\Models\Posts $imageId)
 	{
-	
+
 		// dd($imageId);
 
 

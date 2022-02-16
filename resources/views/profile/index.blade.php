@@ -5,7 +5,7 @@
 <div class="container">
 	<div class="row row-cols-1 row-cols-md-2">
 		<div class="col col-md-5 d-flex justify-content-center justify-content-md-end align-items-center">
-			<img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-1024.png" style="height: 18rem;" class="rounded-circle p-4">
+			<img src="{{ $user->profile->profileImage()}}" style="height: 18rem;" class="rounded-circle p-4">
 		</div>
 		<div class="col col-md-5 my-auto p-4">
 			<div class="d-flex align-items-center">
@@ -24,7 +24,7 @@
 			<a href="{{ $user->id }}/edit" class="my-auto">Edit Profile</a>
 			@endauth
 			<div class="d-flex align-items-center">
-				<div class="pe-4"><strong>XX</strong> posts</div>
+				<div class="pe-4"><strong>{{ $user->posts->count()}}</strong> posts</div>
 				<div class="pe-4"><strong>XX</strong> followers</div>
 				<div class="pe-4"><strong>XX</strong> following</div>
 			</div>
@@ -33,10 +33,9 @@
 			<a class="" href="https://{{-- $user->profile->url --}}">{{-- $user->profile->url --}}</a>
 		</div>
 	</div>
-
 	<div class="container d-flex flex-column flex-md-row justify-content-center align-items-center">
 		<div class="d-flex justify-content-center">
-			<img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-1024.png" class="rounded-circle p-4" style="height: 18rem;">
+			<img src="{{ $user->profile->profileImage()}}" class="rounded-circle p-4" style="height: 18rem;">
 		</div>
 		<div class="p-4 col-md-6">
 			<div class="d-flex align-items-center">
@@ -44,15 +43,18 @@
 				<div class="border-stop ps-3">
 					<button type="button" class="btn btn-primary btn-sm">Follow</button>
 				</div>
-				@auth
+				@can('update', $user->profile)
 				<div class="border-stop ps-3">
 					<a href="{{ route('p.create') }}" type="button" class="btn btn-success btn-sm">Post Image</a>
 				</div>
-				@endauth
+				@endcan
 			</div>
-			@auth
-			<a class="my-auto">Edit Profile</a>
-			@endauth
+			@can('update', $user->profile)
+			<a href="{{ route('profile.edit', $user) }}" class="my-auto">Edit Profile</a>
+			@endcan
+			<!-- @cannot('update', $user->profile)
+			<a href="{{ route('profile.edit', $user) }}" class="my-auto">Edit Profile</a>
+			@endcan -->
 			<div class="d-flex align-items-center">
 				<div class="pe-4"><strong>{{ $user->posts->count()}}</strong> posts</div>
 				<div class="pe-4"><strong>XX</strong> followers</div>

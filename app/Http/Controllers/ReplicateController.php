@@ -38,9 +38,6 @@ class ReplicateController extends Controller
 
 	public function store()
 	{
-
-
-
 		// $image = request()->validate(['image'=>'required|image']);
 		$data = request()->validate([
 			'caption' => 'required|starts_with:foo',
