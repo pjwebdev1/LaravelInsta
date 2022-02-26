@@ -7,13 +7,17 @@ use App\Models\Profile;
 use Illuminate\Http\Request;
 
 use Intervention\Image\Facades\Image;
+use phpDocumentor\Reflection\PseudoTypes\False_;
 
 class ProfilesController extends Controller
 {
 	public function index($user)
 	{
+		$follows = (auth()->user() ? auth()->user()->following->contains($user) : false);
+		
+		// dd($follows);
 		$user = User::findOrFail($user);
-		return view('profile.index', ['user' => $user]);
+		return view('profile.index', ['user' => $user, 'follows'=>$follows]);
 	}
 
 

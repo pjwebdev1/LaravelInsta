@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class FollowButton extends Component
+class TestComponent extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class FollowButton extends Component
      */
     public function render()
     {
-        return view('components.follow-button');
+        return view('components.test-component');
     }
 }

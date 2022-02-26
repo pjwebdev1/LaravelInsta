@@ -1,0 +1,69 @@
+{
+  "id": 1,
+  "name": "test1",
+  "username": "test1",
+  "email": "test1@test.com",
+  "email_verified_at": null,
+  "created_at": "2022-02-14T04:21:20.000000Z",
+  "updated_at": "2022-02-14T04:21:20.000000Z",
+  "profile": {
+    "id": 1,
+    "user_id": 1,
+    "title": "test1",
+    "description": "test1 description",
+    "url": "https:\/\/www.test1.com",
+    "image": "profile\/ww2rOZzaVf8MjEwjJHCv30p9m6Nmd7y2yUMHimHq.jpg",
+    "created_at": "2022-02-14T04:21:20.000000Z",
+    "updated_at": "2022-02-14T04:23:29.000000Z"
+  },
+  "posts": [{
+    "id": 1,
+    "user_id": 1,
+    "caption": "first post",
+    "image": "uploads\/fOrVdvGnrcVnYEipDhLHrK9GTnwwQR67OIrEvxYI.png",
+    "created_at": "2022-02-14T04:34:49.000000Z",
+    "updated_at": "2022-02-14T04:34:49.000000Z"
+  }]
+}
+
+
+[{
+  "id": 2,
+  "user_id": 2,
+  "title": "test2",
+  "description": "updated description2",
+  "url": "https:\/\/www.updatedurl.com",
+  "image": "profile\/GEwt6B3IwJXycEqBTlBTKHWIRelXFSdy6FLc1JM1.jpg",
+  "created_at": "2022-02-14T05:02:09.000000Z",
+  "updated_at": "2022-02-15T23:52:39.000000Z",
+  "pivot": {
+    "user_id": 1,
+    "profile_id": 2
+  }
+}, {
+  "id": 1,
+  "user_id": 1,
+  "title": "test1",
+  "description": "test1 description",
+  "url": "https:\/\/www.test1.com",
+  "image": "profile\/ww2rOZzaVf8MjEwjJHCv30p9m6Nmd7y2yUMHimHq.jpg",
+  "created_at": "2022-02-14T04:21:20.000000Z",
+  "updated_at": "2022-02-14T04:23:29.000000Z",
+  "pivot": {
+    "user_id": 1,
+    "profile_id": 1
+  }
+}, {
+  "id": 3,
+  "user_id": 3,
+  "title": "test3",
+  "description": null,
+  "url": null,
+  "image": null,
+  "created_at": "2022-02-19T23:07:25.000000Z",
+  "updated_at": "2022-02-19T23:07:25.000000Z",
+  "pivot": {
+    "user_id": 1,
+    "profile_id": 3
+  }
+}]

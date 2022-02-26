@@ -3,6 +3,8 @@
 @section('content')
 
 <div class="container">
+
+{{$follows}}
 	<div class="row row-cols-1 row-cols-md-2">
 		<div class="col col-md-5 d-flex justify-content-center justify-content-md-end align-items-center">
 			<img src="{{ $user->profile->profileImage()}}" style="height: 18rem;" class="rounded-circle p-4">
@@ -11,7 +13,7 @@
 			<div class="d-flex align-items-center">
 				<div class="h1 my-auto">{{ $user->username }}</div>
 				<div class="border-stop ps-3">
-					<button type="button" class="btn btn-primary btn-sm">Follow</button>
+					<follow-button user-id="{{ $user->id }}" follows="{{$follows}}"></follow-button>
 				</div>
 				@auth
 				<div class="border-stop ps-3">
@@ -25,8 +27,8 @@
 			@endauth
 			<div class="d-flex align-items-center">
 				<div class="pe-4"><strong>{{ $user->posts->count()}}</strong> posts</div>
-				<div class="pe-4"><strong>XX</strong> followers</div>
-				<div class="pe-4"><strong>XX</strong> following</div>
+				<div class="pe-4"><strong>{{ $user->profile->followers->count()}}</strong> followers</div>
+				<div class="pe-4"><strong>{{ $user->following->count()}}</strong> following</div>
 			</div>
 			<div class="h5 pt-3">{{-- $user->profile->title --}}</div>
 			<div class="">{{-- $user->profile->description --}}</div>
@@ -41,7 +43,7 @@
 			<div class="d-flex align-items-center">
 				<div class="h1 my-auto">{{ $user->username }}</div>
 				<div class="border-stop ps-3">
-					<button type="button" class="btn btn-primary btn-sm">Follow</button>
+					<follow-button user-id="{{ $user->id }}" follows="{{$follows}}"></follow-button>
 				</div>
 				@can('update', $user->profile)
 				<div class="border-stop ps-3">
@@ -93,4 +95,6 @@
 		</div>
 	</div>
 </div>
+
+
 @endsection

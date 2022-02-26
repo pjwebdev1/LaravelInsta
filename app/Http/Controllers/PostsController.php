@@ -29,7 +29,7 @@ class PostsController extends Controller
 		$imagePath = request('image')->store('uploads', 'public');
 
 
-dd($imagePath);
+		// dd($imagePath);
 
 		$image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 800);
 		$image->save();
@@ -60,6 +60,4 @@ dd($imagePath);
 		// return redirect('/storage/' . $imageUrl);		
 		// return redirect('/posts/' . $imageUrl);
 	}
-
-
 }

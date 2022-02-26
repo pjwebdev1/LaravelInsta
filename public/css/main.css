@@ -9,3 +9,13 @@
 .class1 .class2 {
   color: green;
 }
+
+.female {
+  font-size: 1.2rem;
+  color: blueviolet;
+}
+
+.male {
+  font-size: 1.2rem;
+  color: #2b3de2;
+}

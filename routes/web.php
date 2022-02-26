@@ -30,6 +30,10 @@ Route::get('/post/create', [App\Http\Controllers\PostsController::class, 'create
 Route::post('/post', [App\Http\Controllers\PostsController::class, 'store'])->name('post.store');
 Route::get('/post/{postId}', [App\Http\Controllers\PostsController::class, 'show'])->name('post.show');
 
+//axios
+// Route::post('/follow/{user}', function (){ return 'success';});
+Route::post('/follow/{user}', [App\Http\Controllers\FollowsController::class, 'store'])->name('post.store');
+
 
 Route::get('/testscript', [App\Http\Controllers\TestscriptController::class, 'index'])->name('testscript.index');
 Route::post('/testscript', [App\Http\Controllers\TestscriptController::class, 'store'])->name('testscript.store');
